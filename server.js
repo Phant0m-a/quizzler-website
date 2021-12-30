@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 const indexRouter = require('./routes/index')
 const screenRouter = require('./routes/screen')
 app.set('view engine', 'ejs')
-//😎
+//
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
@@ -123,4 +123,5 @@ app.use(upload({
 app.use('/', indexRouter)
 app.use('/screen', screenRouter)
 
-app.listen(process.env.PORT || 3000 || 5000) 
+app.listen(process.env.PORT || 3000 || 5000);
+console.log('+ server restarted successfully 😎') 
